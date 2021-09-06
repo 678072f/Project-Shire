@@ -1,0 +1,2 @@
+This folder contains compiled code/executables for the project. These are debugging versions and contain debugging information. Release versions are found in the Release folder. The contents are split up into subfolders that describe what aspect of the project the files are related to.
+Last updated: 8/20/2021
