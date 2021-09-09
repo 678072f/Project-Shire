@@ -1,2 +1,0 @@
-This folder contains source code for the project. 
-Last updated: 6/18/2021
