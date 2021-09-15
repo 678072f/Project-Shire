@@ -17,10 +17,13 @@ int main() {
 	// Math:
 	double fluidElement[][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 
-	double matrixMult(double mat1, double mat2);
+	double matrixMult(double mat1[], double mat2[]);
 	double matrixMult(double mat1, double mat2) {
 		for(int i = 0; i < sizeof(mat1); i++)
+			for(int j = 0; j < sizeof(mat2[0]); j++) {
 			//TODO:Finish Loop and function
+			}
+			
 	}
 
 	return 0;
