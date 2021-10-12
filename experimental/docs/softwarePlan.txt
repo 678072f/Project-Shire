@@ -1,0 +1,13 @@
+// This file details the road map for the software in this project
+// It should serve as a development map and keep the project on track
+
+main.cpp: main project code, contains program loop -> Ongoing
+
+serial.cpp	|
+		|-> Contains code for serial communications
+serial.h	|	Due November 2021
+
+
+dynamics.cpp	|
+
+dynamics.h	|	Due January 2022
