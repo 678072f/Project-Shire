@@ -1,2 +1,8 @@
 experimental/DEV/
 .DS_Store
+experimental/.DS_Store
+experimental/bin/.DS_Store
+experimental/budget/.DS_Store
+experimental/debug/.DS_Store
+experimental/docs/.DS_Store
+eperimental/source/.DS_Store
