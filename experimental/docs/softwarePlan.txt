@@ -1,13 +1,28 @@
-// This file details the road map for the software in this project
-// It should serve as a development map and keep the project on track
+// This file details a road map for the software for this project
+// it is meant to help keep development on track and serve as a development map for the initial release.
 
-main.cpp: main project code, contains program loop -> Ongoing
-
-serial.cpp	|
-		|-> Contains code for serial communications
-serial.h	|	Due November 2021
+main.cpp -> main program file -> Ongoing.
 
 
-dynamics.cpp	|
+serial.cpp.    - |
+		|-> Program files that contain code for serial communications.
+serial.h       - |		Due November 2021
 
-dynamics.h	|	Due January 2022
+
+dynamics.cpp   - |
+		|-> Program files that contain autopilot and dynamics calculations.
+dynamics.h     - |		Due January 2022
+
+
+ui.cpp	- |
+	  |-> Program files that contain code for flight instruments and UI.
+ui.h	- |		Due May 2022
+
+
+constants.conf -> Config file for atmospheric constants. -> Ongoing.
+
+options.conf -> Config file that contains user-changeable configuration. -> Due February 2022
+
+controls.cpp	- |
+controls.h	  |-> Contains code for the flight controls (controls without extension is arduino file).
+controls 	- |		Due December 2021
