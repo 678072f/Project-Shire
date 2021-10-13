@@ -1,0 +1,45 @@
+# ./Project-Shire/
+
+# experimental:
+
+// Description: Experimental branch for development of new parts of the project, incomplete versions.
+
+./bin/: <Empty> // Will contain compiled release code for the project
+
+./budget/: Project Budget.numbers // Contains the Budget for the Project.
+
+./debug/: contents.txt // Contains compiled debug versions of the software
+
+./docs/: changelog.txt Constraints.txt Mission-definition.txt NACA0012-64-Data.pdf NACA0015-NACA0018-Data.pdf 'Parts List.txt' 'Project Hierarchy.txt' Resources.txt softwarePlan.txt 'Technical Specifications.pages' 'User Guide.pages' // Contains Documentation for all parts of the project.
+
+./README.md: README file
+
+./source/: constants.conf contents.txt GPIO.cpp GPIO.h main.cpp serial.cpp serial.h // Contains all source code for the project.
+
+# dev
+
+// Description: Development branch for testing completed versions of the software, used for beta testing and eliminating bugs.
+
+./bin/: <Empty> // Will contain compiled release code for the project
+
+./budget/: Project Budget.numbers // Contains the Budget for the Project.
+
+./debug/: contents.txt // Contains compiled debug versions of the software
+
+./docs/: changelog.txt Constraints.txt Mission-definition.txt NACA0012-64-Data.pdf NACA0015-NACA0018-Data.pdf 'Parts List.txt' 'Project Hierarchy.txt' Resources.txt softwarePlan.txt 'Technical Specifications.pages' 'User Guide.pages' // Contains Documentation for all parts of the project.
+
+./README.md: README file
+
+./source/: constants.conf contents.txt GPIO.cpp GPIO.h main.cpp serial.cpp serial.h // Contains all source code for the project.
+
+# master
+
+// Description: Master branch for release versions of the software. This will contain the latest stable versions and will contain the fewest bugs.
+
+./bin/: <Empty> // Will contain compiled release code for the project
+
+./budget/: Project Budget.numbers // Contains the Budget for the Project.
+
+./docs/: changelog.txt Mission-definition.txt 'Technical Specifications.pdf' 'User Guide.pdf' // Contains Documentation for end user/release versions.
+
+./README.md: README file

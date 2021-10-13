@@ -1,0 +1,26 @@
+# Project Timeline
+
+# June 18, 2021:
+
+Beginning of Project, git repository setup, and definition of constraints.
+June 20,2021: Updated Constraints.
+
+# June 20, 2021:
+
+Updated Constraints.
+
+# August 20, 2021:
+
+Updated project structure and added an experimental branch for development and organization. Updated contents files to reflect changes and define purposes for folders.
+
+# August 21, 2021:
+
+Updated Constraints.
+
+# October 12, 2021:
+
+Added GPIO Library, added new resources for UART and C++.
+
+# October 13, 2021:
+
+Added Serial.h for Serial Class, moved softwarePlan.txt to ./docs folder, updated .pages documents to .txt for compatibility.
