@@ -3,3 +3,5 @@ Resources:
 Practical Guide to Baremetal C++: https://alex-robenko.gitbook.io/bare_metal_cpp/ 
 
 C++ Course: https://www.learncpp.com/cpp-tutorial/introduction-to-fundamental-data-types/
+
+Git Workflow Example: https://nvie.com/posts/a-successful-git-branching-model/
