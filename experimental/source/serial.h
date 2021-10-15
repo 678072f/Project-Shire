@@ -19,11 +19,13 @@ namespace Shire {
         Serial(); // Constructor
         double readSerial(void); // Public Read from serial function
         void writeSerial(double data, std::string dataString); // Public write to serial function
+        void setSerialPort(int port); // allows for modifying the serial port
         ~Serial(); // Destructor
     private:
-        int serialPort;
-        double serialData; // Data stored from serial.
-        std::string serialDataString;
+        int serialPort; // Serial port (generally /dev/ttyACM0 for Arduino.
+        double serialData; // Numerical data stored from serial (May not be correct).
+        std::string serialDataString; // String data from serial (may not be correct).
+        struct termios arduino;
     }
 }
 
