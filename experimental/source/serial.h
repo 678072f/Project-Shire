@@ -17,15 +17,18 @@ namespace Shire {
     class Serial {
     public:
         Serial(); // Constructor
-        double readSerial(void); // Public Read from serial function
-        void writeSerial(double data, std::string dataString); // Public write to serial function
+        void readSerial(int buffer); // Public Read from serial function
+        void writeSerial(unsigned char data); // Public write to serial function
         void setSerialPort(int port); // allows for modifying the serial port
+        char getSerialData(); // Retrieve whatever is stored in "serialDataIn" from reading
+        int getNumberRead(); // Read how many bytes were received
         ~Serial(); // Destructor
     private:
-        int serialPort; // Serial port (generally /dev/ttyACM0 for Arduino.
-        double serialData; // Numerical data stored from serial (May not be correct).
-        std::string serialDataString; // String data from serial (may not be correct).
+        int serialPort; // Serial port (generally /dev/ttyACM0 for Arduino
+        unsigned char serialDataOut[]; // Data to write to serial.
+        char serialDataIn[];
         struct termios arduino;
+        int numberRead;
     }
 }
 

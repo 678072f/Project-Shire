@@ -44,26 +44,45 @@ Serial::Serial(void) {
     arduino.c_cc[VMIN]
     
     cfsetspeed(&arduino, B9600); // Set Baud rate (9600 for arduino)
+    // Save tty settings and check for errors.
+    if(tcsetattr(serialPort, TCSANOW, &arduino) != 0) {
+        std::printf("Error %i from tcsetattr: %s\n", errno, strerror(errno));
+    }
 }
 
-double Serial::readSerial(void) {
+void Serial::readSerial(int buffer) {
     // Read data from serial port and store to variable.
-    std::cout << "Do stuff...\n";
-    return data;
+    std::cout << "Reading from serial...\n";
+    serialDataIn[buffer];
+    
+    numberRead = read(serialPort, &serialDataIn, sizeof(serialDataIn));
 }
 
-void Serial::writeSerial(double data, std::string dataString) {
+void Serial::writeSerial(unsigned char &data) {
     // Write data to serial.
-    std::cout << "Do stuff...\n";
-    serialData = data;
-    serialDataString = dataString;
+    std::cout << "Writing to serial...\n";
+    serialDataOut[] = &data;
+    
+    write(serialPort, serialDataOut, sizeof(serialDataOut));
 }
 
 void Serial::setSerialPort(int port) {
     serialPort = open(port, O_RDWR); // For modifying the serial port.
 }
 
+char Serial::getSerialData() {
+    char data = &serialDataIn;
+    return data;
+}
+
+int Serial::getNumberRead() {
+    int number = numberRead;
+    return number;
+}
+
 Serial::~Serial() {
     // Destructor: Uninitialize serial connection here.
     std::cout << "Closing serial port...\n";
+    
+    close(serialPort);
 }
