@@ -12,8 +12,6 @@
 #include <iostream>
 #include<sstream>
 
-using namespace std;
-
 GPIOClass::GPIOClass()
 {
     this->GPIONum = "0";

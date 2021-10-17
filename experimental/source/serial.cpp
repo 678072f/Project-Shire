@@ -9,9 +9,8 @@ using namespace Shire;
 
 Serial::Serial(void) {
     // Constructor: Setup serial connection here.
-    std::cout << "Opening serial port...\n";
     
-    serialPort = open("/dev/ttyACM0", O_RDWR); // Open serial at /dev/ttyACM0 (Default)
+    serialPort = open("/dev/tty", O_RDWR);
     
     // Read existing settings and handle errors.
     if(tcgetattr(serialPort, &arduino) != 0) {
@@ -19,11 +18,11 @@ Serial::Serial(void) {
     }
     
     // C_FLAGS
-    arduino.c_flag |= PARENB; // Set parity bit.
-    arduino.c_flag &= ~CSTOPB; // Clear stop field, use one stop bit.
-    arduino.c_flag |= CS8; // Set 8 bits per byte.
-    arduino.c_flag &= ~CRTSCTS; // Disable RTS/CTS hardware flow control.
-    arduino.c_flag |= CREAD | CLOCAL; // Turn on READ and disable ctrl lines.
+    arduino.c_cflag |= PARENB; // Set parity bit.
+    arduino.c_cflag &= ~CSTOPB; // Clear stop field, use one stop bit.
+    arduino.c_cflag |= CS8; // Set 8 bits per byte.
+    arduino.c_cflag &= ~CRTSCTS; // Disable RTS/CTS hardware flow control.
+    arduino.c_cflag |= CREAD | CLOCAL; // Turn on READ and disable ctrl lines.
     
     // C_LFLAGS
     arduino.c_lflag &= ~ICANON; // Disable canonical mode.
@@ -34,14 +33,14 @@ Serial::Serial(void) {
     
     // Input modes
     arduino.c_iflag &= ~(IXON | IXOFF | IXANY); // Turn off software flow control.
-    arduino.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INCLR | IGNCR | ICRNL); // Disable special handling of received bits.
+    arduino.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL); // Disable special handling of received bits.
     
     // Output Modes
     arduino.c_oflag &= ~OPOST; // Disable special interpretation of output.
     arduino.c_oflag &= ~ONLCR; // Prevent conversion of new-line characters to carriage return.
     
     arduino.c_cc[VTIME] = 50; // Wait up to 5 seconds.
-    arduino.c_cc[VMIN]
+    arduino.c_cc[VMIN];
     
     cfsetspeed(&arduino, B9600); // Set Baud rate (9600 for arduino)
     // Save tty settings and check for errors.
@@ -50,28 +49,34 @@ Serial::Serial(void) {
     }
 }
 
+void Serial::openSerialPort() {
+    std::cout << "Opening serial port..." << std::endl;
+    
+    serialPort = open(serialPortDir, O_RDWR); // Open serial port.
+}
+
 void Serial::readSerial(int buffer) {
     // Read data from serial port and store to variable.
-    std::cout << "Reading from serial...\n";
+    std::cout << "Reading from serial..." << std::endl;
     serialDataIn[buffer];
     
-    numberRead = read(serialPort, &serialDataIn, sizeof(serialDataIn));
+    numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
 }
 
-void Serial::writeSerial(unsigned char &data) {
+void Serial::writeSerial(unsigned char data) {
     // Write data to serial.
-    std::cout << "Writing to serial...\n";
-    serialDataOut[] = &data;
+    std::cout << "Writing to serial..." << std::endl;
+    serialDataOut = data;
     
-    write(serialPort, serialDataOut, sizeof(serialDataOut));
+    write(serialPort, &serialDataOut, sizeof(serialDataOut));
 }
 
-void Serial::setSerialPort(int port) {
-    serialPort = open(port, O_RDWR); // For modifying the serial port.
+void Serial::setSerialPort(char * port) {
+    serialPortDir = port; // For modifying the serial port.
 }
 
 char Serial::getSerialData() {
-    char data = &serialDataIn;
+    char data = *serialDataIn;
     return data;
 }
 
@@ -82,7 +87,7 @@ int Serial::getNumberRead() {
 
 Serial::~Serial() {
     // Destructor: Uninitialize serial connection here.
-    std::cout << "Closing serial port...\n";
+    std::cout << "Closing serial port..." << std::endl;
     
     close(serialPort);
 }
