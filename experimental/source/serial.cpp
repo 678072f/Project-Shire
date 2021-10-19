@@ -7,10 +7,16 @@
 
 using namespace Shire;
 
-Serial::Serial(void) {
+Serial::Serial(char * serial) {
     // Constructor: Setup serial connection here.
     
-    serialPort = open("/dev/tty", O_RDWR);
+    serialPortDir = serial;
+}
+
+void Serial::openSerialPort() {
+    std::cout << "Opening serial port at " << serialPortDir << std::endl;
+    
+    serialPort = open(serialPortDir, O_RDWR);
     
     // Read existing settings and handle errors.
     if(tcgetattr(serialPort, &arduino) != 0) {
@@ -47,12 +53,6 @@ Serial::Serial(void) {
     if(tcsetattr(serialPort, TCSANOW, &arduino) != 0) {
         std::printf("Error %i from tcsetattr: %s\n", errno, strerror(errno));
     }
-}
-
-void Serial::openSerialPort() {
-    std::cout << "Opening serial port at " << serialPortDir << std::endl;
-    
-    serialPort = open(serialPortDir, O_RDWR); // Open serial port.
 }
 
 void Serial::readSerial() {

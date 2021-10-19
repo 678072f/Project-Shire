@@ -6,7 +6,6 @@
 #define SERIAL_H
 
 #include <iostream> // For inputs and outputs
-#include <string> // For C++ Strings
 #include <stdio.h> // Standard input and ouput library
 #include <fcntl.h> // File controls (Linux/UNIX)
 #include <errno.h> // Error functions
@@ -16,7 +15,7 @@
 namespace Shire {
     class Serial {
     public:
-        Serial(); // Constructor
+        Serial(char * serial); // Constructor
         void openSerialPort(); // Open the serial port.
         void readSerial(); // Public Read from serial function
         void writeSerial(char data); // Public write to serial function

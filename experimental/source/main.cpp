@@ -2,17 +2,17 @@
 // Daniel Duhon 2021
 
 #include <iostream>
-#include <math.h>
-#include "serial.h"
+#include "general.h"
 
 int main() {
-	std::cout << "Project-Shire Software V0.0.1c (0001a)" << std::endl;
+	std::cout << "Project-Shire Software Version V" << Shire::versionNumber << " (" << Shire::buildNumber << ")"<< std::endl;
 
-    Shire::Serial test1;
-    Shire::Serial test2;
-    
     char * serialPort1 = "/dev/ttyACM0";
     char * serialPort2 = "/dev/ttyt0";
+    
+    Shire::Serial test1(serialPort1);
+    Shire::Serial test2(serialPort2);
+    
     char data1;
     char data2;
     int n = 256; // Test Buffer Size
