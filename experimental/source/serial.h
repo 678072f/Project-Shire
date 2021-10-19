@@ -1,5 +1,5 @@
-// Serial UART Class V1.0
-// Daniel Duhon, 10/14/2021
+// Serial UART Class V1.1
+// Daniel Duhon, 10/19/2021
 // Serial Class
 
 #ifndef SERIAL_H
@@ -18,8 +18,7 @@ namespace Shire {
         Serial(char * serial); // Constructor
         void openSerialPort(); // Open the serial port.
         void readSerial(); // Public Read from serial function
-        void writeSerial(char data); // Public write to serial function
-        void setSerialPort(char * port); // allows for modifying the serial port
+        void writeSerial(unsigned char data); // Public write to serial function
         char getSerialData(); // Retrieve whatever is stored in "serialDataIn" from reading
         int getNumberRead(); // Read how many bytes were received
         ~Serial(); // Destructor

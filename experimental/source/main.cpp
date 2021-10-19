@@ -1,24 +1,21 @@
-// Project-Shire V0.0.1a
+// Project-Shire V0.0.1c
 // Daniel Duhon 2021
+// Last Updated: 10/19/2021
 
-#include <iostream>
 #include "general.h"
 
 int main() {
 	std::cout << "Project-Shire Software Version V" << Shire::versionNumber << " (" << Shire::buildNumber << ")"<< std::endl;
 
     char * serialPort1 = "/dev/ttyACM0";
-    char * serialPort2 = "/dev/ttyt0";
+    char * serialPort2 = "/dev/ttys0";
     
     Shire::Serial test1(serialPort1);
     Shire::Serial test2(serialPort2);
     
-    char data1;
-    char data2;
-    int n = 256; // Test Buffer Size
-    
-    test1.setSerialPort(serialPort1);
-    test2.setSerialPort(serialPort2);
+    unsigned char data1;
+    unsigned char data2;
+//    int n = 256; // Test Buffer Size
     
     test1.openSerialPort();
     test2.openSerialPort();

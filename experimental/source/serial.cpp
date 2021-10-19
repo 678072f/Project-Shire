@@ -1,5 +1,5 @@
-// Serial Communications Link V1.0
-// Daniel Duhon, 10/14/2021
+// Serial Communications Link V1.1
+// Daniel Duhon, 10/19/2021
 // Serial Class
 
 #include <stdlib.h>
@@ -64,16 +64,12 @@ void Serial::readSerial() {
     numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
 }
 
-void Serial::writeSerial(char data) {
+void Serial::writeSerial(unsigned char data) {
     // Write data to serial.
     std::cout << "Writing to serial at " << serialPortDir << std::endl;
     serialDataOut = data;
     
     write(serialPort, &serialDataOut, sizeof(serialDataOut));
-}
-
-void Serial::setSerialPort(char * port) {
-    serialPortDir = port; // For modifying the serial port.
 }
 
 char Serial::getSerialData() {
