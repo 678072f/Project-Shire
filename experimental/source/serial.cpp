@@ -50,22 +50,23 @@ Serial::Serial(void) {
 }
 
 void Serial::openSerialPort() {
-    std::cout << "Opening serial port..." << std::endl;
+    std::cout << "Opening serial port at " << serialPortDir << std::endl;
     
     serialPort = open(serialPortDir, O_RDWR); // Open serial port.
 }
 
-void Serial::readSerial(int buffer) {
+void Serial::readSerial() {
     // Read data from serial port and store to variable.
-    std::cout << "Reading from serial..." << std::endl;
-    serialDataIn[buffer];
+    std::cout << "Reading from serial at " << serialPortDir << std::endl;
+    
+//    serialDataIn[bufferSize];
     
     numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
 }
 
-void Serial::writeSerial(unsigned char data) {
+void Serial::writeSerial(char data) {
     // Write data to serial.
-    std::cout << "Writing to serial..." << std::endl;
+    std::cout << "Writing to serial at " << serialPortDir << std::endl;
     serialDataOut = data;
     
     write(serialPort, &serialDataOut, sizeof(serialDataOut));
@@ -87,7 +88,7 @@ int Serial::getNumberRead() {
 
 Serial::~Serial() {
     // Destructor: Uninitialize serial connection here.
-    std::cout << "Closing serial port..." << std::endl;
+    std::cout << "Closing serial port at " << serialPortDir << std::endl;
     
     close(serialPort);
 }

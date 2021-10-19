@@ -6,21 +6,37 @@
 #include "serial.h"
 
 int main() {
-	std::cout << "Project-Shire Software V0.0.1c" << std::endl;
+	std::cout << "Project-Shire Software V0.0.1c (0001a)" << std::endl;
 
-    Shire::Serial test;
+    Shire::Serial test1;
+    Shire::Serial test2;
     
     char * serialPort1 = "/dev/ttyACM0";
+    char * serialPort2 = "/dev/ttyt0";
     char data1;
-    int n;
+    char data2;
+    int n = 256; // Test Buffer Size
     
-    test.setSerialPort(serialPort1);
-    test.openSerialPort();
-    test.readSerial(n);
+    test1.setSerialPort(serialPort1);
+    test2.setSerialPort(serialPort2);
     
-    data1 = test.getSerialData();
+    test1.openSerialPort();
+    test2.openSerialPort();
     
-    std::cout << data1 << std::endl;
+    unsigned char testData1[] = { 'A', 'b', 'C', 'd' };
+    unsigned char testData2[] = { 'a', 'B', 'c', 'D' };
+    
+    test1.writeSerial(*testData1);
+    test2.writeSerial(*testData2);
+    test1.readSerial();
+    test2.readSerial();
+    
+    data1 = test1.getSerialData();
+    data2 = test2.getSerialData();
+    
+    std::cout << data1 << '\t' << testData1 << std::endl;
+    std::cout << data2 << '\t' << testData2 << std::endl;
+
     
 //    FUTURE IMPLEMENTATION
 //	// constants: (to be replaced by constants_config.conf)

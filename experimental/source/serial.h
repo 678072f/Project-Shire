@@ -18,8 +18,8 @@ namespace Shire {
     public:
         Serial(); // Constructor
         void openSerialPort(); // Open the serial port.
-        void readSerial(int buffer); // Public Read from serial function
-        void writeSerial(unsigned char data); // Public write to serial function
+        void readSerial(); // Public Read from serial function
+        void writeSerial(char data); // Public write to serial function
         void setSerialPort(char * port); // allows for modifying the serial port
         char getSerialData(); // Retrieve whatever is stored in "serialDataIn" from reading
         int getNumberRead(); // Read how many bytes were received
@@ -29,7 +29,7 @@ namespace Shire {
         int serialPort; // Serial port
         struct termios arduino;
         int numberRead;
-        unsigned char serialDataOut; // Data to write to serial.
+        char serialDataOut; // Data to write to serial.
         char serialDataIn[]; // Data read from serial.
     };
 }
