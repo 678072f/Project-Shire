@@ -24,3 +24,7 @@ Added GPIO Library, added new resources for UART and C++.
 # October 13, 2021:
 
 Added Serial.h for Serial Class, moved softwarePlan.txt to ./docs folder, updated .pages documents to .txt for compatibility.
+
+# October 19, 2021:
+
+Completed Serial Class and added test code in main.cpp for testing. Added Arduino source folder and Arduino test file.
