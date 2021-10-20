@@ -2,7 +2,7 @@
 // Daniel Duhon, 10/19/2021
 // Serial Class
 
-#include <stdlib.h>
+// Included libraries
 #include "serial.h"
 
 using namespace Shire;
@@ -55,12 +55,11 @@ void Serial::openSerialPort() {
     }
 }
 
+// Read data from serial port and store to variable.
 void Serial::readSerial() {
-    // Read data from serial port and store to variable.
     std::cout << "Reading from serial at " << serialPortDir << std::endl;
     
-//    serialDataIn[bufferSize];
-    
+    // Counts number of bytes received.
     numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
 }
 
@@ -72,6 +71,7 @@ void Serial::writeSerial(unsigned char data) {
     write(serialPort, &serialDataOut, sizeof(serialDataOut));
 }
 
+// Allows for use and output of Serial::serialDataIn variable.
 char Serial::getSerialData() {
     char data = *serialDataIn;
     return data;

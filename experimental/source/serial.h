@@ -5,6 +5,7 @@
 #ifndef SERIAL_H
 #define SERIAL_H
 
+#include <stdlib.h> // Standard Library for printf
 #include <iostream> // For inputs and outputs
 #include <stdio.h> // Standard input and ouput library
 #include <fcntl.h> // File controls (Linux/UNIX)
