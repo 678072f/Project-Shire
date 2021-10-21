@@ -12,6 +12,7 @@
 #include <errno.h> // Error functions
 #include <termios.h> // POSIX Terminal control definitions
 #include <unistd.h> // write(), read(), close()
+#include <string.h>
 
 namespace Shire {
     class Serial {

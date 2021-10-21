@@ -7,32 +7,32 @@
 int main() {
 	std::cout << "Project-Shire Software Version V" << Shire::versionNumber << " (" << Shire::buildNumber << ")"<< std::endl;
 
-    char * serialPort1 = "/dev/ttyACM0";
-    char * serialPort2 = "/dev/ttys0";
+    char * serialPort1 = "/dev/ttyAMA0";
+    char * serialPort2 = "/dev/ttyS0";
     
     Shire::Serial test1(serialPort1);
-    Shire::Serial test2(serialPort2);
+   // Shire::Serial test2(serialPort2);
     
     unsigned char data1;
-    unsigned char data2;
+   // unsigned char data2;
 //    int n = 256; // Test Buffer Size
     
     test1.openSerialPort();
-    test2.openSerialPort();
+   // test2.openSerialPort();
     
     unsigned char testData1[] = { 'A', 'b', 'C', 'd' };
     unsigned char testData2[] = { 'a', 'B', 'c', 'D' };
     
     test1.writeSerial(*testData1);
-    test2.writeSerial(*testData2);
+   // test2.writeSerial(*testData2);
     test1.readSerial();
-    test2.readSerial();
+   // test2.readSerial();
     
     data1 = test1.getSerialData();
-    data2 = test2.getSerialData();
+   // data2 = test2.getSerialData();
     
     std::cout << data1 << '\t' << testData1 << std::endl;
-    std::cout << data2 << '\t' << testData2 << std::endl;
+   // std::cout << data2 << '\t' << testData2 << std::endl;
 
     
 //    FUTURE IMPLEMENTATION
