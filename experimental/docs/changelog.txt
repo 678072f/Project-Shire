@@ -28,3 +28,7 @@ Added Serial.h for Serial Class, moved softwarePlan.txt to ./docs folder, update
 # October 19, 2021:
 
 Completed Serial Class and added test code in main.cpp for testing. Added Arduino source folder and Arduino test file.
+
+# October 20, 2021:
+
+Tested Serial class on Raspberry Pi and added controls.cpp and controls.h files.
