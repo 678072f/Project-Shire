@@ -1,13 +1,13 @@
 # Project Constraints
 
 1. Airplane
-	- Carry 4-6 passengers in passenger configuration and be easily customizable by 	  the end-user.
+	- Carry 4-6 passengers in passenger configuration and be easily customizable by the end-user.
 	- Carry a family and luggage easily and efficiently.
 	- Operating range of at least 1000 NM.
 	- Land and take off on short runways.
 	- Easy and safe to fly.
 	- Low cost to manufacture, purchase, operate, and maintain.
-	- Light weight airframe that is durable and can handle payload of around 		  7,000-10,000 lbs.
+	- Light weight airframe that is durable and can handle payload of around  7,000-10,000 lbs.
 2. Flight Controls/Cockpit
 	- Simple and intuitive flight control system.
 	- Simple and intuitive flight (PFD, Navigation, etc.) displays.
