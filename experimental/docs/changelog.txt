@@ -32,3 +32,11 @@ Completed Serial Class and added test code in main.cpp for testing. Added Arduin
 # October 20, 2021:
 
 Tested Serial class on Raspberry Pi and added controls.cpp and controls.h files.
+
+# November 24, 2021:
+
+Added the following documents for reference:
+
+1. "Determination of Stability and Control Derivatives for a Modern L.pdf"
+2. "Stability-derivatives.pdf"
+3. "Term_Project_Report.pdf"
