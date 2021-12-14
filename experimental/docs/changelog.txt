@@ -40,3 +40,13 @@ Added the following documents for reference:
 1. "Determination of Stability and Control Derivatives for a Modern L.pdf"
 2. "Stability-derivatives.pdf"
 3. "Term_Project_Report.pdf"
+
+# December 7, 2021;
+
+Added references:
+
+	"B777 FBW Control System document"
+	"AERO 321 Reference Material (ZIP Archive)"
+
+Added RPiOS Base image.
+Removed LFS directory (deprecated).
