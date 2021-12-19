@@ -19,7 +19,7 @@ int main() {
     test1.openSerialPort();
    // test2.openSerialPort();
     
-    unsigned int testData1[] = { 1 };
+    unsigned char testData1[] = { 'a', 'b', 'c' };
     
     test1.writeSerial(*testData1);
    // test2.writeSerial(*testData2);
@@ -28,13 +28,15 @@ int main() {
     
     data1 = test1.getSerialData();
    // data2 = test2.getSerialData();
-    while(1) {
+    int i = 0;
+    while(i != -1) {
     std::cout << data1 << '\t' << testData1 << std::endl;
    // std::cout << data2 << '\t' << testData2 << std::endl;
-    int i = 0;
     std::cin >> i;
     if(i == 1)
         test1.writeSerial(*testData1);
+        test1.readSerial();
+        data1 = test1.getSerialData();
     }
     
 //    FUTURE IMPLEMENTATION
