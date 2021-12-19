@@ -7,8 +7,7 @@
 int main() {
 	std::cout << "Project-Shire Software Version V" << Shire::versionNumber << " (" << Shire::buildNumber << ")"<< std::endl;
 
-    char * serialPort1 = "/dev/ttyAMA0";
-    char * serialPort2 = "/dev/ttyS0";
+    char * serialPort1 = "/dev/ttyACM0";
     
     Shire::Serial test1(serialPort1);
    // Shire::Serial test2(serialPort2);
@@ -20,8 +19,7 @@ int main() {
     test1.openSerialPort();
    // test2.openSerialPort();
     
-    unsigned char testData1[] = { 'A', 'b', 'C', 'd' };
-    unsigned char testData2[] = { 'a', 'B', 'c', 'D' };
+    unsigned int testData1[] = { 1 };
     
     test1.writeSerial(*testData1);
    // test2.writeSerial(*testData2);
@@ -30,10 +28,14 @@ int main() {
     
     data1 = test1.getSerialData();
    // data2 = test2.getSerialData();
-    
+    while(1) {
     std::cout << data1 << '\t' << testData1 << std::endl;
    // std::cout << data2 << '\t' << testData2 << std::endl;
-
+    int i = 0;
+    std::cin >> i;
+    if(i == 1)
+        test1.writeSerial(*testData1);
+    }
     
 //    FUTURE IMPLEMENTATION
 //	// constants: (to be replaced by constants_config.conf)
