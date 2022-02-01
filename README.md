@@ -4,6 +4,9 @@ The experimental branch contains the latest development builds and feature updat
 # Version History
 # Development Version 0.0.1c:
 
+1/31/2022
+Updated documentation and added testing information.
+
 10/19/2021
 Added Serial Class and Arduino Test code for using serial communications.
 
