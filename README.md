@@ -4,6 +4,9 @@ The experimental branch contains the latest development builds and feature updat
 # Version History
 # Development Version 0.0.1c:
 
+7/28/2022
+Added PFD and NAV display code files.
+
 1/31/2022
 Updated documentation and added testing information.
 

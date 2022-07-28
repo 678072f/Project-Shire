@@ -50,3 +50,7 @@ Added references:
 
 Added RPiOS Base image.
 Removed LFS directory (deprecated).
+
+# July 28, 2022:
+
+Added ../source/pfd.py and ../source/nav.py
