@@ -6,7 +6,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int data = Serial.read();
+  char data[256] = {Serial.read()};
   Serial.print(data);
   Serial.println();
   for(int i = 0; i < sizeof(data); i++)

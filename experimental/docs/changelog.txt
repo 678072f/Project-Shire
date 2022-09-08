@@ -51,6 +51,12 @@ Added references:
 Added RPiOS Base image.
 Removed LFS directory (deprecated).
 
+<<<<<<< HEAD
 # September 8, 2022:
 
 Added 3-View Sketch (Duhon_1A_3_View.jpg)
+=======
+# July 28, 2022:
+
+Added ../source/pfd.py and ../source/nav.py
+>>>>>>> 8f35ba013961c1e88933d98ffe0bd5fcda344bf1
