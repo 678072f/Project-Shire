@@ -65,8 +65,8 @@ void Serial::readSerial() {
 
 void Serial::writeSerial(unsigned char data) {
     // Write data to serial.
-    std::cout << "Writing to serial at " << serialPortDir << std::endl;
     serialDataOut = data;
+    std::cout << "Writing " << data << " to serial at " << serialPortDir << std::endl;
     
     write(serialPort, &serialDataOut, sizeof(serialDataOut));
 }

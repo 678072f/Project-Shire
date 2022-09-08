@@ -50,3 +50,7 @@ Added references:
 
 Added RPiOS Base image.
 Removed LFS directory (deprecated).
+
+# September 8, 2022:
+
+Added 3-View Sketch (Duhon_1A_3_View.jpg)
