@@ -5,24 +5,24 @@ main.cpp -> main program file -> Ongoing.
 
 
 serial.cpp.    - |
-		|-> Program files that contain code for serial communications.
-serial.h       - |		Due November 2021
+		 |-> Program files that contain code for serial communications.
+serial.h       - |		BETA complete, final version due December 2022
 
 
 dynamics.cpp   - |
 		|-> Program files that contain autopilot and dynamics calculations.
-dynamics.h     - |		Due January 2022
+dynamics.h     - |		Due January 2023
 
 
 ui.cpp	- |
 	  |-> Program files that contain code for flight instruments and UI.
-ui.h	- |		Due May 2022
+ui.h	- |		Due May 2024
 
 
 constants.conf -> Config file for atmospheric constants. -> Ongoing.
 
-options.conf -> Config file that contains user-changeable configuration. -> Due February 2022
+options.conf -> Config file that contains user-changeable configuration. -> Due February 2023
 
 controls.cpp	- |
 controls.h	  |-> Contains code for the flight controls (controls without extension is arduino file).
-controls 	- |		Due December 2021
+controls 	- |		Due March 2023

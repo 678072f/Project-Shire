@@ -4,6 +4,9 @@ The experimental branch contains the latest development builds and feature updat
 # Version History
 # Development Version 0.0.1c:
 
+9/26/2022
+Added thermodynamics documentation. Updated Engineering Report Document. 
+
 7/28/2022
 Added PFD and NAV display code files.
 
