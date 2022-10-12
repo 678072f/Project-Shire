@@ -6,3 +6,6 @@ all: ../bin/main.o ../bin/serial.o
 
 ../bin/serial.o: serial.cpp serial.h
 	g++ -c -v -std=c++17 serial.cpp -o ../bin/serial.o
+
+clean:
+	rm -rf ../bin/*.o ../bin/shire_d
