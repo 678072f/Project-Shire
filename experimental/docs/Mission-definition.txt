@@ -1,1 +1,4 @@
 Mission Statement:
+Carry up to 6 passengers + baggage distances up to 1000 NM.
+
+- The airplane should weigh no more than 12,500 lbs.

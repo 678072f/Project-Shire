@@ -7,3 +7,7 @@ C++ Course: https://www.learncpp.com/cpp-tutorial/introduction-to-fundamental-da
 Git Workflow Example: https://nvie.com/posts/a-successful-git-branching-model/
 
 15" Display: https://www.waveshare.com/product/15.6inch-hdmi-lcd.htm?sku=18188
+
+Fuselage Design Article: https://aerotoolbox.com/intro-fuselage-design/
+
+Funcamentals of Aircraft Design: https://aerotoolbox.com/category/intro-aircraft-design/
