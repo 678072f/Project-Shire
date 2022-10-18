@@ -1,11 +1,26 @@
-all: ../bin/main.o ../bin/serial.o
-	g++ -v -std=c++17 ../bin/*.o -o ../bin/shire_d
+CC=g++
+CFLAGS=-v -Wall -std=c++17
+DEBUGDIR=../debug
+DIR=../bin
 
-../bin/main.o: main.cpp
-	g++ -c -v -std=c++17 main.cpp -o ../bin/main.o
 
-../bin/serial.o: serial.cpp serial.h
-	g++ -c -v -std=c++17 serial.cpp -o ../bin/serial.o
+all: $(DIR)/main.o $(DIR)/serial.o
+	$(CC) $(CFLAGS) ../bin/*.o -o $(DIR)/shire
+
+$(DIR)/main.o: main.cpp
+	$(CC) -c $(CFLAGS) main.cpp -o $(DIR)/main.o
+
+$(DIR)/serial.o: serial.cpp serial.h
+	$(CC) -c $(CFLAGS) serial.cpp -o $(DIR)/serial.o
+	
+debug: $(DEBUGDIR)/main.o $(DEBUGDIR)/serial.o
+	$(CC) $(CFLAGS) $(DEBUGDIR)/*.o -o $(DEBUGDIR)/shire_d
+	
+$(DEBUGDIR)/main.o: main.cpp
+	$(CC) -c $(CFLAGS) main.cpp -o $(DEBUGDIR)/main.o
+	
+$(DEBUGDIR)/serial.o: serial.cpp serial.h
+	$(CC) -c $(CFLAGS) serial.cpp -o $(DEBUGDIR)/serial.o
 
 clean:
-	rm -rf ../bin/*.o ../bin/shire_d
+	rm -rf $(DIR)/*.o $(DEBUGDIR)/*.o $(DIR)/shire $(DEBUGDIR)/shire_d
