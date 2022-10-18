@@ -20,7 +20,7 @@ namespace Shire {
         Serial(char * serial); // Constructor
         void openSerialPort(); // Open the serial port.
         void readSerial(); // Public Read from serial function
-        void writeSerial(unsigned char data); // Public write to serial function
+        void writeSerial(char data); // Public write to serial function
         char getSerialData(); // Retrieve whatever is stored in "serialDataIn" from reading
         int getNumberRead(); // Read how many bytes were received
         ~Serial(); // Destructor

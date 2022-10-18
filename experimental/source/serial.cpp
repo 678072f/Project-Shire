@@ -21,7 +21,7 @@ void Serial::openSerialPort() {
     serialPort = open(serialPortDir, O_RDWR);
     
     // Read existing settings and handle errors.
-    if(tcgetattr(serialPort, &arduino) != 0) {
+    if(serialPort < 0) {
         std::printf("Error %i from tcgetattr: %s\n", errno, strerror(errno));
     }
     
@@ -63,14 +63,16 @@ void Serial::readSerial() {
     
     // Counts number of bytes received.
     numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
+    std::cout << numberRead << '\n';
 }
 
-void Serial::writeSerial(unsigned char data) {
+void Serial::writeSerial(char data) {
     // Write data to serial.
     serialDataOut = data;
     std::cout << "Writing " << data << " to serial at " << serialPortDir << std::endl;
     
     write(serialPort, &serialDataOut, sizeof(serialDataOut));
+    std::cout << "Done..." << '\n';
 }
 
 // Allows for use and output of Serial::serialDataIn variable.

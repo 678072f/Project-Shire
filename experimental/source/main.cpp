@@ -16,15 +16,16 @@ int main() {
         Shire::Serial test1(SERIAL_PORT_PATH);
         // Shire::Serial test2(serialPort2);
         
-        unsigned char data1;
         // unsigned char data2;
         //    int n = 256; // Test Buffer Size
         
         test1.openSerialPort();
         // test2.openSerialPort();
         
-        unsigned char testData1[] = { 'a', 'b', 'c' };
-        std::cout << (testData1);
+        char testData1[7] = { 'a', 'b', 'c', '1', '2', '3', '\n'};
+        std::cout << testData1 << '\n';
+    for(int i = 0; i < sizeof(testData1); i++)
+        test1.writeSerial(testData1[i]);
         
         // test1.writeSerial(*testData1);
         // test2.writeSerial(*testData2);
