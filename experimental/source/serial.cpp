@@ -16,6 +16,8 @@ Serial::Serial(char * serial) {
 void Serial::openSerialPort() {
     std::cout << "Opening serial port at " << serialPortDir << std::endl;
     
+    struct termios arduino;
+    
     serialPort = open(serialPortDir, O_RDWR);
     
     // Read existing settings and handle errors.

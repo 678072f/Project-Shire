@@ -27,7 +27,6 @@ namespace Shire {
     private:
         char * serialPortDir;
         int serialPort; // Serial port
-        struct termios arduino;
         int numberRead;
         char serialDataOut; // Data to write to serial.
         char serialDataIn[]; // Data read from serial.
