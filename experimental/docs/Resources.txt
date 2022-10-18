@@ -10,4 +10,4 @@ Git Workflow Example: https://nvie.com/posts/a-successful-git-branching-model/
 
 Fuselage Design Article: https://aerotoolbox.com/intro-fuselage-design/
 
-Funcamentals of Aircraft Design: https://aerotoolbox.com/category/intro-aircraft-design/
+Fundamentals of Aircraft Design: https://aerotoolbox.com/category/intro-aircraft-design/
