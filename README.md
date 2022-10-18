@@ -5,6 +5,9 @@ The experimental branch contains the latest development builds and feature updat
 # Version History
 # Development Version 0.0.1c:
 
+10/18/2022:
+Added .DEB package. Updated Changelog.
+
 10/12/2022:
 Modified MAKEFILE, test code for serial, added upload script.
 

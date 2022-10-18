@@ -1,0 +1,5 @@
+Package: shire
+Architecture: armhf
+Version: 0.1
+Maintainer: Duhon Aero (danielgduhon@gmail.com)
+Description: Experimental version of the Duhon Aerospace GA Aircraft software.
