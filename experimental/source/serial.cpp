@@ -58,12 +58,14 @@ void Serial::openSerialPort() {
 }
 
 // Read data from serial port and store to variable.
-void Serial::readSerial() {
+char Serial::readSerial() {
     std::cout << "Reading from serial at " << serialPortDir << std::endl;
     
     // Counts number of bytes received.
     numberRead = read(serialPort, &serialDataIn, sizeof(&serialDataIn));
     std::cout << numberRead << '\n';
+    
+    return read(serialPort, &serialDataIn, sizeof(&serialDataIn));
 }
 
 void Serial::writeSerial(char data) {
