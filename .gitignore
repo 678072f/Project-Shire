@@ -1,1 +1,5 @@
-experimental/DEV/
+.DS_Store
+dev/.DS_Store
+dev/bin/.DS_Store
+dev/docs/.DS_Store
+dev/source/.DS_Store
