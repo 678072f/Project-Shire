@@ -4,4 +4,5 @@ Project Shire is the name of a project to develop a GA Airplane intended for pri
 
 # Development History:
 
-Coming soon.
+# October 20, 2022:
+Released version 0.0.1d to dev for testing.
