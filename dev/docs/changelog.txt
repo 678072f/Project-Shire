@@ -1,0 +1,69 @@
+# Project Timeline
+
+# June 18, 2021:
+
+Beginning of Project, git repository setup, and definition of constraints.
+June 20,2021: Updated Constraints.
+
+# June 20, 2021:
+
+Updated Constraints.
+
+# August 20, 2021:
+
+Updated project structure and added an experimental branch for development and organization. Updated contents files to reflect changes and define purposes for folders.
+
+# August 21, 2021:
+
+Updated Constraints.
+
+# October 12, 2021:
+
+Added GPIO Library, added new resources for UART and C++.
+
+# October 13, 2021:
+
+Added Serial.h for Serial Class, moved softwarePlan.txt to ./docs folder, updated .pages documents to .txt for compatibility.
+
+# October 19, 2021:
+
+Completed Serial Class and added test code in main.cpp for testing. Added Arduino source folder and Arduino test file.
+
+# October 20, 2021:
+
+Tested Serial class on Raspberry Pi and added controls.cpp and controls.h files.
+
+# November 24, 2021:
+
+Added the following documents for reference:
+
+1. "Determination of Stability and Control Derivatives for a Modern L.pdf"
+2. "Stability-derivatives.pdf"
+3. "Term_Project_Report.pdf"
+
+# December 7, 2021;
+
+Added references:
+
+	"B777 FBW Control System document"
+	"AERO 321 Reference Material (ZIP Archive)"
+
+Added RPiOS Base image.
+Removed LFS directory (deprecated).
+
+# September 8, 2022:
+
+Added 3-View Sketch (Duhon_1A_3_View.jpg)
+
+# July 28, 2022:
+
+Added ../source/pfd.py and ../source/nav.py
+
+# October 18, 2022:
+
+Updated C++ Code for testing, added docs and resources, added .deb package.
+
+# October 20, 2022:
+
+Released version 0.0.1d to dev branch for continued testing. Began work on 
+0.0.2a with controls class.
