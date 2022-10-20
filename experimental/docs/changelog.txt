@@ -62,3 +62,8 @@ Added ../source/pfd.py and ../source/nav.py
 # October 18, 2022:
 
 Updated C++ Code for testing, added docs and resources, added .deb package.
+
+# October 20, 2022:
+
+Released version 0.0.1d to dev branch for continued testing. Began work on 
+0.0.2a with controls class.
