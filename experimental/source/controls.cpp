@@ -5,24 +5,34 @@
 // Included files
 #include "controls.h"
 
-// Define control surface paths
-#define ARDUINO1 "/dev/ttyAMA0"
-#define ARDUINO2 "/dev/ttyAMA1"
-#define ARDUINO3 "/dev/ttyAMA2"
-
-// Initialize Serial Class
-Shire::Serial elevators(ARDUINO1);
-Shire::Serial ailerons(ARDUINO1);
-Shire::Serial rudder(ARDUINO2);
-Shire::Serial flaps(ARDUINO2);
-Shire::Serial throttle(ARDUINO3);
+// Serial Ports
+#define PORT1 "/dev/ttyAMA0"
+#define PORT2 "/dev/ttyAMA1"
+#define PORT3 "/dev/ttyAMA2"
 
 // Controls self-test
 Controls::Controls() {
-    std::cout << "Hello World!\n";
-    elevators.openSerialPort();
-    rudder.openSerialPort();
-    throttle.openSerialPort();
+    deflection = "deflection:0";
+    
+    Shire::Serial init1(PORT1);
+    Shire::Serial init2(PORT2);
+    Shire::Serial init1(PORT3);
+    
+    init1.writeSerial(deflection);
+    init2.writeSerial(deflection);
+    init3.writeSerial(deflection);
+    
+    isActive = init1.readSerial();
+    if (!isActive)
+        std::printf("Error %i from controls!", errno, strerror(errno));
+    
+    isActive = init2.readSerial();
+    if (!isActive)
+        std::printf("Error %i from controls!", errno, strerror(errno));
+    
+    isActive = init3.readSerial();
+    if (!isActive)
+        std::printf("Error %i from controls!", errno, strerror(errno));
 }
 
 // Read the control input and store it to controlInput

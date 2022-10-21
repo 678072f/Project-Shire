@@ -1,4 +1,11 @@
-# Project Timeline
+# Project Timeline (Version 0.0.2)
+
+# October 21, 2022:
+
+Updated Serial class and created interface with controls class.
+Worked on controls class.
+
+# Project Timeline (Version 0.0.1d)
 
 # June 18, 2021:
 

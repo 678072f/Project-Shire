@@ -10,7 +10,7 @@ namespace Shire {
 
 // Version and Build variables
 static std::string versionNumber = "0.0.2"; // 0.0.1 = Serial, 0.0.2 = controls, etc.
-static std::string buildNumber = "0002a"; // Build Number = 0 + version number + letter corresponding to build (a = first build, b = second build, etc.).
+static std::string buildNumber = "0002b"; // Build Number = 0 + version number + letter corresponding to build (a = first build, b = second build, etc.).
 
 }
 

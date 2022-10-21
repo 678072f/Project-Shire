@@ -1,4 +1,4 @@
-// Serial Communications Link V1.1
+// Serial Communications Link V2.0
 // Daniel Duhon, 10/19/2021
 // Serial Class
 
@@ -88,6 +88,67 @@ int Serial::getNumberRead() {
     return number;
 }
 
+// IO Variable Functions
+void Serial::setElevatorDeflection(double deltaE) {
+    
+}
+
+
+double Serial::getElevatorDeflection() {
+    
+}
+
+
+void Serial::setAileronDeflection(double deltaA) {
+    
+}
+
+
+double Serial::getAileronDeflection() {
+    
+}
+
+
+void Serial::setRudderDeflection(double deltaR) {
+    
+}
+
+
+double Serial::getRudderDeflection() {
+    
+}
+
+
+void Serial::setThrottle(double deltaT) {
+    
+}
+
+
+double Serial::getThrottle() {
+    
+}
+
+// Status functions
+bool Serial::checkElevatorStatus() {
+    
+}
+
+
+bool Serial::checkAileronStatus() {
+    
+}
+
+
+bool Serial::checkRudderStatus() {
+    
+}
+
+
+bool Serial::checkThrottleStatus() {
+    
+}
+
+// Destructor
 Serial::~Serial() {
     // Destructor: Uninitialize serial connection here.
     std::cout << "Closing serial port at " << serialPortDir << std::endl;
