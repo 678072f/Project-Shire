@@ -73,4 +73,4 @@ for i in output:
 with open('output.csv', 'w') as out_file:
     out_file.write("Weight, Velocity, Chord Length, Wing Span, Lift Coefficient, Drag Coefficient\n")
     for i in output:
-        out_file.write("%.4f, %.4f, %.4f, %.4f, %.4f, %.4f\n" % (i[0], i[1], i[2], i[3], i[4], i[5]))
+        out_file.write("%.0f, %.1f, %.2f, %.1f, %.4f, %.4f\n" % (i[0], i[1], i[2], i[3], i[4], i[5]))

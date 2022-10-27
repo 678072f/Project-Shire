@@ -13,7 +13,7 @@
 // Controls self-test
 Controls::Controls() {
     deflection = "deflection:0";
-    
+    // TODO: Need to add function to test comtrols in order to return a value.
     Shire::Serial init1(PORT1);
     Shire::Serial init2(PORT2);
     Shire::Serial init1(PORT3);
@@ -37,22 +37,23 @@ Controls::Controls() {
 
 // Read the control input and store it to controlInput
 double Controls::readControlInput() {
-    
+    // read(control) { return value }
     return 0;
 }
 
 // Set the amount of delflection from controlInput to deflection
 void Controls::setDeflection(double delta) {
-    
+    // command(controlInput) { output = deflectionAmount return output }
 }
 
 // Read the deflection variable
 double getDeflection() {
-    
+    // getDeflectionAmount() { return value }
     return 0;
 }
 
 // Clean up program upon shutdown
 Controls::~Controls() {
     std::cout << "Bye bye!\n";
+    // clean up before shutdown
 }
