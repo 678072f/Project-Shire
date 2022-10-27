@@ -9,7 +9,12 @@ This project is intended to be used on a specific set of hardware and is not mea
 # Table of Contents:
 
 [Version History](https://github.com/678072f/Project-Shire/tree/experimental#version-history)
-- [Development Version 0.0.2b](https://github.com/678072f/Project-Shire/tree/experimental#development-version-0.0.2b)
+- [Development Version 0.0.2b](https://github.com/678072f/Project-Shire/tree/experimental#development-version-002b)
+- [Development Version 0.0.2a](https://github.com/678072f/Project-Shire/tree/experimental#development-version-002a)
+- [Development Version 0.0.1d](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001d)
+- [Development Version 0.0.1c](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001c)
+- [Development Version 0.0.1b](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001b)
+- [Development Version 0.0.1a](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001a)
 
 
 # Version History
