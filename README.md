@@ -6,6 +6,12 @@ The experimental branch contains the latest development builds and feature updat
 
 This project is intended to be used on a specific set of hardware and is not meant to be used outside of that purpose. Any use outside of the project scope is not supported.
 
+# Table of Contents:
+
+[Version History](https://github.com/678072f/Project-Shire/tree/experimental#version-history)
+- [Development Version 0.0.2b](https://github.com/678072f/Project-Shire/tree/experimental#development-version-0.0.2b)
+
+
 # Version History
 
 # Development Version 0.0.2b:
