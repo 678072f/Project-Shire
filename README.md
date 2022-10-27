@@ -15,7 +15,11 @@ This project is intended to be used on a specific set of hardware and is not mea
 - [Development Version 0.0.1c](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001c)
 - [Development Version 0.0.1b](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001b)
 - [Development Version 0.0.1a](https://github.com/678072f/Project-Shire/tree/experimental#development-version-001a)
+[How to use this project](https://github.com/678072f/Project-Shire/tree/experimental#how-to-use-this-project)
 
+# How to Use This Project
+
+Although this project as a whole is designed specifically for the whole airplane, components of it may be used for various applications.
 
 # Version History
 
