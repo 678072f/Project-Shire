@@ -1,5 +1,10 @@
 # Project Timeline (Version 0.0.2)
 
+# October 27, 2022:
+
+Updated Wingcalc Parameters and began work on graphing program for analysis.
+Updated SControls programs with pseudo code for placeholders.
+
 # October 21, 2022:
 
 Updated Serial class and created interface with controls class.
