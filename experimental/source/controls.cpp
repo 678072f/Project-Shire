@@ -12,24 +12,24 @@
 
 // Controls self-test
 Controls::Controls() {
-    deflection = "deflection:0";
+    // deflection = "deflection";
     // TODO: Need to add function to test comtrols in order to return a value.
     Shire::Serial init1(PORT1);
     Shire::Serial init2(PORT2);
-    Shire::Serial init1(PORT3);
-    
+    Shire::Serial init3(PORT3);
+
     init1.writeSerial(deflection);
     init2.writeSerial(deflection);
     init3.writeSerial(deflection);
-    
+
     isActive = init1.readSerial();
     if (!isActive)
         std::printf("Error %i from controls!", errno, strerror(errno));
-    
+
     isActive = init2.readSerial();
     if (!isActive)
         std::printf("Error %i from controls!", errno, strerror(errno));
-    
+
     isActive = init3.readSerial();
     if (!isActive)
         std::printf("Error %i from controls!", errno, strerror(errno));

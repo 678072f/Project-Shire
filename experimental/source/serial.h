@@ -26,7 +26,7 @@ namespace Shire {
         void writeSerial(char data); // Public write to serial function
         char getSerialData(); // Retrieve whatever is stored in "serialDataIn" from reading
         int getNumberRead(); // Read how many bytes were received
-        
+
         // Interact with I/O variables
         void setElevatorDeflection(double deltaE);
         double getElevatorDeflection();
@@ -36,13 +36,13 @@ namespace Shire {
         double getRudderDeflection();
         void setThrottle(double deltaT);
         double getThrottle();
-        
+
         // Get status messages
         bool checkElevatorStatus();
         bool checkAileronStatus();
         bool checkRudderStatus();
         bool checkThrottleStatus();
-        
+
         ~Serial(); // Destructor
     private:
         // Serial Variables
@@ -50,19 +50,21 @@ namespace Shire {
         int serialPort; // Serial port
         int numberRead;
         char serialDataOut; // Data to write to serial.
-        char serialDataIn[]; // Data read from serial.
-        
+
         // Input/Output variables
         double elevator_deflection;
         double aileron_deflection;
         double rudder_deflection;
         double throttle_setting;
-        
+
         // Status variables
         bool elevatorStatus;
         bool aileronStatus;
         bool rudderStatus;
         bool throttleStatus;
+
+	// Make this one at end of class
+	char serialDataIn[]; // Data read form serial {unknown if necessary}
     };
 }
 
